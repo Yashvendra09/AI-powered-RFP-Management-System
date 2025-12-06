@@ -93,6 +93,7 @@ flowchart LR
   Service_Email --> SMTP
 
   Service_LLM --> LLM
+  ```
 
 Flow in words:
 
