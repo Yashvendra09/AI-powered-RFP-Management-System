@@ -1,0 +1,18 @@
+/* src/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom body styles for the modern/glossy background */
+body {
+  font-family: 'Inter', sans-serif;
+  min-height: 100vh;
+  /* Soft, subtle gradient background (Indigo to Cyan) */
+  background-color: #f8fafc;
+  background-image: linear-gradient(to bottom right, #eef2ff 0%, #f0f9ff 100%);
+}
+
+/* Ensure no default margin/padding on root elements */
+#root {
+  min-height: 100vh;
+}
