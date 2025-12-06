@@ -93,6 +93,7 @@ flowchart LR
   Service_Email --> SMTP
 
   Service_LLM --> LLM
+
 Flow in words:
 
 Frontend calls the RFP API to create RFPs from natural language, view them, send them, and run comparisons.
