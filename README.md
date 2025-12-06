@@ -53,13 +53,13 @@ High-level architecture:
 
 ```mermaid
 flowchart LR
-  subgraph Client[Frontend (React + Tailwind)]
+  subgraph Client[Frontend]
     UI_RFP[RFP UI]
     UI_Vendors[Vendors UI]
     UI_Compare[Compare View]
   end
 
-  subgraph Server[Backend (Node.js + Express)]
+  subgraph Server[Backend]
     API_RFP[/RFP Routes/]
     API_Vendors[/Vendor Routes/]
     API_Inbound[/Inbound Email Webhook/]
@@ -67,7 +67,7 @@ flowchart LR
     Service_Email[Email Service]
   end
 
-  subgraph DB[(MongoDB Atlas)]
+  subgraph DB[MongoDB Atlas]
     RFPs[(RFPs)]
     Vendors[(Vendors)]
     Proposals[(Proposals)]
@@ -92,7 +92,7 @@ flowchart LR
   API_RFP --> Service_Email
   Service_Email --> SMTP
 
-  Service_LLM <---> LLM
+  Service_LLM --> LLM
 Flow in words:
 
 Frontend calls the RFP API to create RFPs from natural language, view them, send them, and run comparisons.
